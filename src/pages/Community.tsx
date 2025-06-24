@@ -99,41 +99,11 @@ const Community: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {t('joinCommunity')}
+              {t('joinOurCommunity')}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Connect with like-minded learners, share knowledge, and grow together in Afghanistan's largest tech community.
+              {t('communitySubtitle')}
             </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Community Stats */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-          >
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">4,500+</div>
-              <div className="text-gray-600">Community Members</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-teal-600 mb-2">150+</div>
-              <div className="text-gray-600">Monthly Events</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-orange-600 mb-2">25+</div>
-              <div className="text-gray-600">Cities Covered</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
-              <div className="text-gray-600">Success Stories</div>
-            </div>
           </motion.div>
         </div>
       </section>

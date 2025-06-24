@@ -59,6 +59,13 @@ const SinglePage: React.FC = () => {
     toast.success('Successfully subscribed to newsletter!');
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   async function login(email: string, password: string) {
     const response = await fetch('/api/auth/login', {
       method: 'POST',
@@ -219,7 +226,7 @@ const SinglePage: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose RBS-Technology?
+              {t('whyChooseRBS')}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
           </motion.div>
@@ -235,29 +242,21 @@ const SinglePage: React.FC = () => {
               <div className="bg-gradient-to-br from-blue-100 to-blue-200 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <BookOpen className="h-10 w-10 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Expert-Led Courses</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t('expertLedCourses')}</h3>
               <p className="text-gray-600 text-lg">
-                Learn from industry professionals with years of experience in technology and education.
+                {t('expertLedCoursesDesc')}
               </p>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="text-center p-8 group">
-              <div className="bg-gradient-to-br from-teal-100 to-teal-200 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Award className="h-10 w-10 text-teal-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Certified Learning</h3>
-              <p className="text-gray-600 text-lg">
-                Earn recognized certificates that validate your skills and boost your career prospects.
-              </p>
-            </motion.div>
+           
 
             <motion.div variants={fadeInUp} className="text-center p-8 group">
               <div className="bg-gradient-to-br from-orange-100 to-orange-200 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Users className="h-10 w-10 text-orange-600" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Community Support</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t('communitySupport')}</h3>
               <p className="text-gray-600 text-lg">
-                Join a vibrant community of learners and professionals supporting each other's growth.
+                {t('communitySupportDesc')}
               </p>
             </motion.div>
           </motion.div>
@@ -309,11 +308,7 @@ const SinglePage: React.FC = () => {
                       allowFullScreen
                     />
                   </div>
-                  {course.certificate && (
-                    <div className="absolute top-4 right-4">
-                      <Award className="h-6 w-6 text-yellow-500" />
-                    </div>
-                  )}
+                  
                 </div>
                 
                 <div className="p-6">
@@ -325,12 +320,7 @@ const SinglePage: React.FC = () => {
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-sm text-gray-600">
-                      {course.certificate && (
-                        <div className="flex items-center space-x-1">
-                          <Award className="h-4 w-4 text-yellow-500" />
-                          <span>{t('certificate')}</span>
-                        </div>
-                      )}
+                      
                     </div>
                     <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 flex items-center space-x-2 transform hover:scale-105">
                       <Play className="h-4 w-4" />
@@ -354,16 +344,13 @@ const SinglePage: React.FC = () => {
             variants={staggerContainer}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
           >
+            
             <motion.div variants={fadeInUp}>
-              <div className="text-5xl font-bold mb-2">500+</div>
-              <div className="text-blue-200 text-lg">Students Enrolled</div>
-            </motion.div>
-            <motion.div variants={fadeInUp}>
-              <div className="text-5xl font-bold mb-2">50+</div>
+              <div className="text-5xl font-bold mb-2">3+</div>
               <div className="text-blue-200 text-lg">Courses Available</div>
             </motion.div>
             <motion.div variants={fadeInUp}>
-              <div className="text-5xl font-bold mb-2">95%</div>
+              <div className="text-5xl font-bold mb-2">15%</div>
               <div className="text-blue-200 text-lg">Success Rate</div>
             </motion.div>
             <motion.div variants={fadeInUp}>
@@ -470,22 +457,9 @@ const SinglePage: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-16"
           >
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">4,500+</div>
-              <div className="text-gray-600">Community Members</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-teal-600 mb-2">150+</div>
-              <div className="text-gray-600">Monthly Events</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-orange-600 mb-2">25+</div>
-              <div className="text-gray-600">Cities Covered</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
-              <div className="text-gray-600">Success Stories</div>
-            </div>
+            
+            
+          
           </motion.div>
 
           {/* Social Platforms */}

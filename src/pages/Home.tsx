@@ -9,8 +9,11 @@ const Home: React.FC = () => {
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
   };
 
   const staggerContainer = {
@@ -122,7 +125,7 @@ const Home: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose RBS-Technology?
+              {t('whyChooseRBS')}
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
           </motion.div>
@@ -138,9 +141,9 @@ const Home: React.FC = () => {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <BookOpen className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert-Led Courses</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('expertLedCourses')}</h3>
               <p className="text-gray-600">
-                Learn from industry professionals with years of experience in technology and education.
+                {t('expertLedCoursesDesc')}
               </p>
             </motion.div>
 
@@ -148,9 +151,9 @@ const Home: React.FC = () => {
               <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="h-8 w-8 text-teal-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Certified Learning</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('certifiedLearning')}</h3>
               <p className="text-gray-600">
-                Earn recognized certificates that validate your skills and boost your career prospects.
+                {t('certifiedLearningDesc')}
               </p>
             </motion.div>
 
@@ -158,9 +161,9 @@ const Home: React.FC = () => {
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="h-8 w-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Community Support</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('communitySupport')}</h3>
               <p className="text-gray-600">
-                Join a vibrant community of learners and professionals supporting each other's growth.
+                {t('communitySupportDesc')}
               </p>
             </motion.div>
           </motion.div>
@@ -175,23 +178,19 @@ const Home: React.FC = () => {
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+            className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center"
           >
             <motion.div variants={fadeInUp}>
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <div className="text-blue-200">Students Enrolled</div>
+              <div className="text-4xl font-bold mb-2">0</div>
+              <div className="text-blue-200">{t('studentsEnrolled')}</div>
             </motion.div>
             <motion.div variants={fadeInUp}>
-              <div className="text-4xl font-bold mb-2">50+</div>
-              <div className="text-blue-200">Courses Available</div>
+              <div className="text-4xl font-bold mb-2">1</div>
+              <div className="text-blue-200">{t('coursesAvailable')}</div>
             </motion.div>
             <motion.div variants={fadeInUp}>
-              <div className="text-4xl font-bold mb-2">95%</div>
-              <div className="text-blue-200">Success Rate</div>
-            </motion.div>
-            <motion.div variants={fadeInUp}>
-              <div className="text-4xl font-bold mb-2">24/7</div>
-              <div className="text-blue-200">Support Available</div>
+              <div className="text-4xl font-bold mb-2">10%</div>
+              <div className="text-blue-200">{t('successRate')}</div>
             </motion.div>
           </motion.div>
         </div>

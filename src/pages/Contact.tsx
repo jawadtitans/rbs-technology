@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
               {t('contactTitle')}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Have questions or want to learn more about our programs? We'd love to hear from you!
+              {t('contactSubtitle')}
             </p>
           </motion.div>
         </div>
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">{t('sendMessageHeading')}</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -131,14 +131,14 @@ const Contact: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">{t('getInTouch')}</h2>
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 p-3 rounded-lg">
                     <Mail className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('emailLabel')}</h3>
                     <p className="text-gray-600">info@rbstechnology.com</p>
                     <p className="text-gray-600">support@rbstechnology.com</p>
                   </div>
@@ -149,7 +149,7 @@ const Contact: React.FC = () => {
                     <Phone className="h-6 w-6 text-teal-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('phoneLabel')}</h3>
                     <p className="text-gray-600">+93 XXX XXX XXX</p>
                     <p className="text-gray-600">+93 XXX XXX XXX</p>
                   </div>
@@ -160,7 +160,7 @@ const Contact: React.FC = () => {
                     <MapPin className="h-6 w-6 text-orange-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Office</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('officeLabel')}</h3>
                     <p className="text-gray-600">Kabul, Afghanistan</p>
                     <p className="text-gray-600">More details coming soon</p>
                   </div>
@@ -171,7 +171,7 @@ const Contact: React.FC = () => {
                     <MessageCircle className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">WhatsApp</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('whatsappLabel')}</h3>
                     <p className="text-gray-600">+93 XXX XXX XXX</p>
                     <a
                       href="https://wa.me/93XXXXXXXXX"

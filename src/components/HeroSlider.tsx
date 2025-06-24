@@ -26,14 +26,14 @@ const HeroSlider: React.FC = () => {
     {
       id: 2,
       title: 'Empowering Afghan Youth',
-      subtitle: 'Building the future through technology education and digital innovation',
+      subtitle: t('heroSliderSub1'),
       image: 'https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=1920',
       gradient: 'from-teal-900/80 via-blue-900/70 to-indigo-900/80'
     },
     {
       id: 3,
       title: 'Learn. Grow. Succeed.',
-      subtitle: 'Join thousands of students transforming their careers with cutting-edge skills',
+      subtitle: t('heroSliderSub2'),
       image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920',
       gradient: 'from-orange-900/80 via-red-900/70 to-pink-900/80'
     }

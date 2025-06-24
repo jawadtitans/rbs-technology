@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold">RBS-Technology</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Empowering Afghanistan's youth through technology, education, and digital transformation.
+              {t('footerDescription')}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
