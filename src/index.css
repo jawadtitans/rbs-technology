@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Optionally, you can add more specific rules for RTL if needed */
