@@ -136,23 +136,6 @@ const Courses: React.FC = () => {
                   <p className="text-gray-600 mb-4">
                     {course.description}
                   </p>
-                  
-                  <div className="flex items-center space-x-3 mb-4">
-                    <img
-                      src={course.teacher.avatar}
-                      alt={course.teacher.name}
-                      className="w-8 h-8 rounded-full"
-                    />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">
-                        {course.teacher.name}
-                      </p>
-                      <p className="text-xs text-gray-600">
-                        {course.teacher.bio}
-                      </p>
-                    </div>
-                  </div>
-                  
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-sm text-gray-600">
                       {course.certificate && (
